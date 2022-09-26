@@ -1,0 +1,275 @@
+body {
+    background: #fff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #fff,
+      #fff
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #fff) no-repeat fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .bg {
+    background: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-371678.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  
+    padding-bottom: 100%;
+  }
+  
+  .frame {
+    background-color: #fff;
+  }
+  
+  .padded {
+    padding: 0 2rem;
+  }
+  
+  .level.fill-height {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .col-6:first-child {
+    padding-left: 0;
+  }
+  
+  .col-6:last-child {
+    padding-right: 0;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  li {
+    padding: 0 0.5rem;
+  }
+  
+  .btn-info {
+    margin-left: 1rem;
+  }
+  
+  /*-------------Navigation*/
+#topHeader {
+    padding: 1em 2em;    
+    font-family: roboto;
+  }
+  
+  
+  
+  .logo {
+    position: absolute;
+            color: #feda15;
+            z-index: 2;
+            top: 0;
+            padding-top: .5em;
+            font-size: 40px;
+            left: 0;
+            padding-left: 1em;
+  }
+  
+  nav {
+    padding: 18px 0;
+  }
+  
+  .mainMenu {
+    float: right;
+  }
+  
+  .mainMenu a {
+    padding:15px 0;
+    margin-left: 35px;
+    font-size: 23px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #2E2E2E;
+    position: relative;
+  
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  .mainMenu a:not(:last-child):hover:after,
+  .mainMenu a:not(:last-child):focus:after {
+    width: 100%;
+    left: 0;
+  }
+  .mainMenu a:hover, .mainMenu a:focus {
+    color: #feda15;
+    text-decoration: none;
+  }
+  
+  
+  
+  .mainMenu a:after {
+    top: 40px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    width: 0;
+    background: #feda15;
+  
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
+  
+  .mainMenu a:first-child {
+    margin:0;
+  }
+  
+  /* iPads to Smartphone for Common Elements ----------- */  
+  @media only screen and (max-width : 1024px) {
+  
+    nav {
+        padding: 0;
+    }
+  
+    .menu-btn-3 {
+        height: 32px;
+        width: 40px;
+        cursor: pointer;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        padding-right: 2em;
+        top: 1.75em;
+    }
+    
+    .menu-btn-3 span,
+    .menu-btn-3 span::before,
+    .menu-btn-3 span::after {
+        background: #fff; 
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 6px;         
+        margin-top: 13px;
+        
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    
+        -webkit-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+    }
+    
+    .menu-btn-3 span::before {
+        margin-top:-12px;
+    }
+    
+    .menu-btn-3 span::after {
+        margin-top:12px;
+    }
+    
+    .menu-btn-3.active span {
+        background: transparent;
+    }
+    
+    .menu-btn-3.active span::before {
+        margin-top: 0;
+    
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    .menu-btn-3.active span::after {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+  
+        margin-top: 0;
+    }
+  
+    
+    #topHeader {
+        position: relative;
+        padding-bottom: 0;
+    }
+  
+        #topHeader .logo {
+            position: absolute;
+            color: #fff;
+            z-index: 2;
+            top: 0;
+            padding-top: .5em;
+            font-size: 40px;
+            left: 0;
+            padding-left: 1em;
+        }
+  
+    .mainMenu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #feda15;
+        width: 100%;
+        padding: 1em 2em 2em;
+        z-index: 1;
+        
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+    }
+  
+    .mainMenu.active  {
+        padding-top:5em;
+    }
+  
+        .mainMenu a {
+            display: list-item;
+            text-align: right;
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            color: #fff;
+            pointer-events: none;
+            line-height: 0;
+            padding: 0 2em 0 0;
+            opacity: 0;
+            visibility: hidden;
+            
+            -webkit-transition: all .6s ease-in-out;
+            transition: all .6s ease-in-out;
+        }
+        
+        .mainMenu a:last-child {
+            background-color: #feda15;
+            color: #fff;
+            border-color: #fff;
+            width: 120px;
+            float: right;
+            text-align: center;
+            margin-top: 20px;
+        }
+  
+  
+        .mainMenu a.active {
+            pointer-events: auto;
+            line-height: 1.3;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            opacity: 1;
+            visibility: visible;
+        }
+  
+        .mainMenu a.active:hover {
+            background-color: #feda15;
+        }
+  
+        .mainMenu a.active:first-child {
+            border-top: 1px solid;
+            margin-top: 18px;
+            padding-top: 30px;
+        }
+  
+            .mainMenu a span {
+                color: #fff;
+            }
+            .mainMenu a:after {
+                display:none;
+            }
+          }
+  
